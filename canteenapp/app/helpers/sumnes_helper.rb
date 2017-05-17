@@ -1,0 +1,2 @@
+module SumnesHelper
+end

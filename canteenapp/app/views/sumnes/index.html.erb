@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Sumnes</h1>
+
+<table class = "table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Price</th>
+      <th>Ingredients</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @sumnes.each do |sumne| %>
+      <tr>
+        <td><%= sumne.name %></td>
+        <td><%= sumne.price %></td>
+        <td><%= sumne.ingredients %></td>
+        <td><%= link_to 'Show', sumne %></td>
+        <td><%= link_to 'Edit', edit_sumne_path(sumne) %></td>
+        <td><%= link_to 'Destroy', sumne, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Sumne', new_sumne_path %>

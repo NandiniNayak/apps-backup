@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @sumne.name %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @sumne.price %>
+</p>
+
+<p>
+  <strong>Ingredients:</strong>
+  <%= @sumne.ingredients %>
+</p>
+
+<p>
+  <%= image_tag(@sumne.picture) %>
+</p>
+
+
+<%= link_to 'Edit', edit_sumne_path(@sumne) %> |
+<%= link_to 'Back', sumnes_path %>

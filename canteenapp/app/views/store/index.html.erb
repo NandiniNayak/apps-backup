@@ -1,0 +1,14 @@
+<p id = "notice"> <%= notice %></p>
+<h1> Your Menu List </h1>
+<% cache ['store' , Menu.latest] do %>
+  <% @menus.each do |menu| %>
+        <h3><%= menu.name %></h3>
+        <%= sanitize(menu.category)%>
+        <div class = "price_line">
+          <span class = "price"><%=number_to_currency(menu.price)%></span>
+          <%= image_tag(menu.picture_url)%>
+          <%= button_to 'Add to Cart',line_items_path(menu_id: menu) %>
+        </div>
+      </div>
+  <% end %>
+<% end %>

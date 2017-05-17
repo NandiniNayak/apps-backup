@@ -1,0 +1,14 @@
+<%= simple_form_for(@sumne) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :name %>
+    <%= f.input :price %>
+    <%= f.input :ingredients %>
+    <%= f.input :picture,as: :file%>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
